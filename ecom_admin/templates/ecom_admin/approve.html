@@ -1,0 +1,49 @@
+{% extends 'ecom_admin/home.html' %}
+{% load static %}
+
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+<section>
+    <div>
+       <center> <h5 style="font-size: xx-large;color: rgb(76, 165, 135);">ACCEPTING SELLER </h5></center><br><br>
+       <table class="table bg-light">
+        <thead>
+          <tr>
+            <th scope="col">S.no</th>
+            <th scope="col">Seller Name</th>
+            <th scope="col">Company Name</th>
+            <th scope="col">Product Details</th>
+            <th scope="col">Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><button style="width: 150px;" type="button" class="btn btn-lg btn-success" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">ACCEPT</button><br><br>
+              <button style="width: 150px;" type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">REJECT</button>
+            </td>
+          </tr>
+          <!-- <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody> -->
+      </table>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'common/home.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head> -->
+<body>
+    {% block header %}
+    <link rel="stylesheet" href="{% static 'css/custreg.css' %}">
+    {% endblock %}
+
+    {% block content %}
+
+      <div>
+        <center>
+        <div>
+            <form action="" style="background-color: rgb(163, 228, 250);" method="POST">
+                {% csrf_token %}
+                
+                    <h3 style="color: rgb(76, 164, 252);font-size: 50px;font-style: italic;">Create Your Account</h3><br><br>
+                    <label for="" style="font-style: italic;padding-right: 160px;font-size: x-large;color: gray;">Your Name :</label><br><br>
+                    <input name="c_name" type="text" style="width: 270px;height: 30px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                    <label for="" style="font-style: italic;padding-right: 190px;font-size: x-large;color: gray;">E-mail :</label><br><br>
+                    <input id="cust_email" name="c_email" type="text" style="width: 270px;height: 30px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                    <span id="err" style="color: red;"></span>
+                    <label for="" style="font-style: italic;padding-right: 170px;font-size: x-large;color: gray;">Address :</label><br><br>
+                    <textarea name="c_address" id="" cols="30" rows="10" style="border-radius: 8px;height: 50px;width: 270px;"></textarea><br><br>
+                    <label for="" style="font-style: italic;padding-right: 110px;font-size: x-large;color: gray;">Phone Number :</label><br><br>
+                    <input name="c_phone" type="text" style="width: 270px;height: 30px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                    <label for="" style="font-style: italic;padding-right: 180px;font-size: x-large;color: gray;">Gender :</label><br><br>
+                    <input name="c_gender" type="radio"><span style="font-style: italic;font-size: larger;">Male</span> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input name="c_gender" type="radio"><span style="font-style: italic;font-size: larger;">Female</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input name="c_gender" type="radio"><span style="font-style: italic;font-size: larger;">Others</span><br><br>
+                    <label for="" style="font-style: italic;padding-right: 160px;font-size: x-large;color: gray;">Password :</label><br><br>
+                    <input name="c_password" type="password" style="width: 270px;height: 30px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br><BR></BR>
+                    <button id="myBtn" type="submit" style="padding-left: 10px; width: 120px;height: 35px; color: white; background-color: gray;border-width: 0px;border-radius: 8px;">SUBMIT</button>
+                    
+            
+            </form>
+        </div>
+    </center>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script>
+        $('#cust_email').change(function(){
+           
+            $.ajaxSetup({
+                headers : {
+                    "X-CSRFToken":$('[name=csrfmiddlewaretoken]').val()
+                }
+            })
+    
+        $.ajax({
+            url : "{% url 'common:check_email' %}",
+            data : {
+
+                'email' : $(this).val()
+            },
+            type : 'POST',
+            dataType : 'text',
+
+            successs : function(response){
+ console.log('gfvhg')
+ console.log(response.status)
+             if (response.status == true){
+                $('#err').html('Email alerady exist')
+                document.getElementById("myBtn").disabled = true;
+             }
+
+
+            },
+            error: function(ts) { alert(ts) } 
+
+        })
+
+
+        })
+
+    </script>
+      {% endblock %}
+</body>
+</html>

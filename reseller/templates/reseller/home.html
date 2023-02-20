@@ -1,0 +1,15 @@
+{% extends 'reseller/master.html' %}
+{% load static %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+<div style="margin-left: 700px;">
+<h3>
+    WELCOME! {{seller_prof.name}}
+</h3>
+<img src="{{seller_prof.photo.url}}" alt="">
+</div>
+{% endblock %}

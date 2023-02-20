@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    {% block header %}
+
+    {% endblock %}
+</head>
+<body style="background-color: rgb(174, 253, 227)">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-md" >
+         
+        
+    
+    <button  class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"> <img src="https://static.thenounproject.com/png/462023-200.png" alt="" style="height: 30px;"></button>
+
+<div style="background-color: rgb(174, 253, 227);" class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header bg-light">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel" style="margin-left: 95px;">ADMIN HOME</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    
+  </div>
+  <div class="offcanvas-body">
+    <nav class="nav flex-column">
+        <a class="nav-link nav-list active" aria-current="page" href="{% url 'ecom_admin:home1' %}" style="font-size: x-large;color: rgb(76, 165, 135);">HOME</a><hr>
+        <a class="nav-link nav-list"  href="{% url 'ecom_admin:approve' %}"  style="font-size: x-large;color: rgb(76, 165, 135);">APPROVE SELLER</a><hr>
+        <a class="nav-link nav-list" href="{% url 'ecom_admin:views' %}"  style="font-size: x-large;color: rgb(76, 165, 135);">VIEW SELLER</a><hr>
+        <a class="nav-link nav-list" href="{% url 'ecom_admin:viewc' %}"  style="font-size: x-large;color: rgb(76, 165, 135);">VIEW CUSTOMER</a><hr>
+        <a class="nav-link nav-list" href="{% url 'ecom_admin:home1' %}"  style="font-size: x-large;color: rgb(76, 165, 135);">HOME</a><hr>
+
+    </nav>
+    
+  </div>
+ 
+</div>
+<a class="navbar-brand" href="#" style="color: black;font-style: italic;font-size: xx-large;">E-COMMERCE</a>
+</div>
+</nav>
+{% block content %}
+
+{% endblock %}
+    
+</body>
+</html>

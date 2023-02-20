@@ -1,0 +1,45 @@
+{% extends 'common/home.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head> -->
+<body>
+  {% block header %}
+  <link rel="stylesheet" href="{% static 'css/custlogin.css' %}">
+  {% endblock %} 
+
+  {% block content %}
+  
+<div>
+  <div style="float: left;">
+    <img src="{% static 'images/download.png' %}" alt="" height="450px" width="700px" style="padding-left: 70px; padding-top: 100px;">
+  </div>
+  <div style="float: right;padding-right: 500px;padding-top: 30px;">
+    <center>
+      <span style="color: red;font-size: x-large;">{{error}}</span> 
+    <form action="" method="POST">
+      {% csrf_token %}
+    
+        <p style="font-style: italic; font-size: xx-large;color:  rgb(76, 164, 252);"><b>LOGIN</b></p><br /><br>
+        <label for="" style="font-style: italic;padding-right: 160px;font-size: x-large;color: gray;">Username :</label><br><br>
+        <input name="c_username" type="text" style="width: 270px;height: 30px;border-radius: 10px;border-color: gray;border-width: 1px;"><br><br><br><br>
+        <label for="" style="font-style: italic;padding-right: 160px;font-size: x-large;color: gray;">Password :</label><br><br>
+        <input name="c_password" type="password" style="width: 270px;height: 30px;border-radius: 10px;border-color: gray;border-width: 1px;"><br><br><br><br>
+        <a href="#"><button style="padding-left: 10px; width: 120px;height: 35px; color: white; background-color: gray;border-width: 0px;border-radius: 8px;">LOGIN</button></a> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'common:custreg' %}" style="text-decoration: none;"><span style="font-size: 25px;font-style: italic;color: gray;"> Sign Up </span></a> 
+    
+  
+    </form>
+    </center>
+   </div>
+</div>
+{% endblock %}
+</body>
+</html>

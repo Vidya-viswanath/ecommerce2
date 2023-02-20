@@ -1,0 +1,58 @@
+{% extends 'reseller/master.html' %}
+{% load static %}
+
+
+    {% block header %}
+    
+    {% endblock %}
+
+    {% block content %}
+    <section>
+        <div style="margin-top:75px;">
+          {% for product in products %}
+            <div id="div1" style="padding-left: 30px;padding-top: 10px;">
+                <div class="card" style="width: 20rem;border-radius: 8px;float: left;margin-top: 55px;margin-right: 75px;margin-left: 80px;">
+                   <img src="{{ product.image.url }}" class="card-img-top" alt="..." height="270px" style="width: 250px;padding-left: 17px;">
+                  <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;line-height: 10px;padding: 1px;font-size: x-large;">{{product.name}}</h5>
+                    <p class="card-text" style="text-align: center;line-height: 40px;padding: 1px;font-size: x-large;">{{product.price}}</p>
+                    <!-- <p class="card-text" style="color: brown; text-align: center;line-height: 30px;padding: 1px;font-size: xx-large;"><b> Up to 10% off</b></p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                    <a href="#" class="btn btn-primary">Add to Cart</a>&nbsp;
+                    <a href="#" class="btn btn-success">Buy Now</a>
+        
+                  </div>
+                </div>
+              </div>
+              <!-- <div id="div2" style="padding-left: 30px;padding-top: 50px;">
+                <div class="card" style="width: 20rem;border-radius: 8px;float: right;margin-right: 60px;margin-top: 5px;" >
+                  <img src="{% static 'images/smartwatch.jpg' %}" class="card-img-top" alt="..." height="270px" style="width: 250px;padding-left: 60px;padding-top: 20px;">
+                  <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;line-height: 10px;padding: 1px;font-size: x-large;">Amazfit Bip 3</h5>
+                    <p class="card-text" style="text-align: center;line-height: 40px;padding: 1px;font-size: x-large;">Smart Watch</p>
+                    <p class="card-text" style="color: brown; text-align: center;line-height: 30px;padding: 1px;font-size: xx-large;"><b style="color: gray;"><strike>3,499/-</strike></b>&nbsp; 2,799/-</p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{% url 'customer:cart' %}" class="btn btn-primary">Add to Cart</a>&nbsp;
+                    <a href="#" class="btn btn-success">Buy Now</a>
+        
+                  </div>
+                </div>
+              </div>
+              <div id="div3" style="padding-left: 20px;padding-top: 1px;">
+                <div class="card" style="width: 20rem;border-radius: 8px;margin-left: 10px; margin-right: 300px;" >
+                  <img src="{% static 'images/phone.png' %}" class="card-img-top" alt="..." height="270px" style="width: 250px;padding-left: 60px;padding-top: 20px;">
+                  <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;line-height: 10px;padding: 1px;font-size: x-large;">OPPO A31</h5>
+                    <p class="card-text" style="text-align: center;line-height: 40px;padding: 1px;font-size: x-large;">11,900 Rs/-</p>
+                    <p class="card-text" style="color: brown; text-align: center;line-height: 30px;padding: 1px;font-size: xx-large;"><b>15% Cash back</b></p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#" class="btn btn-primary">Add to Cart</a>&nbsp;
+                    <a href="#" class="btn btn-success">Buy Now</a>
+        
+                  </div>
+                </div>
+              </div> -->
+              {% endfor %}
+        </div>
+    </section>
+    {% endblock %}

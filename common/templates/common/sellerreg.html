@@ -1,0 +1,48 @@
+{% extends 'common/home.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head> -->
+<body>
+  {% block header %}
+  <link rel="stylesheet" href="{% static 'css/sellerreg.css' %}">
+  {% endblock %}
+    
+  {% block content %}
+      <section>
+        <center>
+        <div style="padding-top: 100px;">
+            <form action="" method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+                
+                    <h3 style="color: rgb(76, 164, 252);font-size: 50px;font-style: italic;">To Create Account</h3><br><br>
+                    <label for="" style="font-style: italic;padding-right: 200px;font-size: x-large;color: gray;">Name :</label><br><br>
+                    <input name="s_name" type="text" style="width: 270px;height: 30px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                    <label for="" style="font-style: italic;padding-right: 200px;font-size: x-large;color: gray;">E-mail :</label><br><br>
+                    <input name="s_email" type="text" style="width: 270px;height: 30px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                    <label for="" style="font-style: italic;padding-right: 170px;font-size: x-large;color: gray;">Address :</label><br><br>
+                    <textarea name="s_address" id="" cols="30" rows="10" style="border-radius: 8px;height: 50px;width: 270px;"></textarea><br><br>
+                    <label for="" style="font-style: italic;padding-right: 120px;font-size: x-large;color: gray;">Phone Number :</label><br><br>
+                    <input name="s_phone" type="text" style="width: 270px;height: 30px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                   <label for="" style="font-style: italic;padding-right: 120px;font-size: x-large;color: gray;">File Upload :</label><br><br>
+                   <input name="s_photo" type="file"><br><br>
+                    <label for="" style="font-style: italic;padding-right: 130px;font-size: x-large;color: gray;">Company Name :</label><br><br>
+                    <input name="s_company" type="text" style="width: 270px;height: 30px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                    <label for="" style="font-style: italic;padding-right: 60px;font-size: x-large;color: gray;">Account Holder Name :</label><br><br>
+                    <input name="s_account" type="text" style="width: 270px;height: 30px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                    <label for="" style="font-style: italic;padding-right: 220px;font-size: x-large;color: gray;">IFSC :</label><br><br>
+                    <input name="s_ifsc" type="text" style="width: 270px;height: 30px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                    <label for="" style="font-style: italic;padding-right: 210px;font-size: x-large;color: gray;">Branch :</label><br><br>
+                    <input name="s_branch" type="text" style="width: 270px;height: 30px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                    <label for="" style="font-style: italic;padding-right: 120px;font-size: x-large;color: gray;">Account Number :</label><br><br>
+                    <input name="s_accnumber" type="text" style="width: 270px;height: 30px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br><br>
+                    <button type="submit" style="padding-left: 10px; width: 120px;height: 35px; color: white; background-color: gray;border-width: 0px;border-radius: 8px;">SUBMIT</button>
+  {% endblock %}
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends 'customer/home.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> -->
+<body>
+    {% block header %}
+    <link rel="stylesheet" href="{% static 'css/edit.css' %}">
+    {% endblock %}
+    
+    {% block content %}
+    <section>
+        <center> 
+        <div style="background-color: rgb(163, 228, 250);">
+            <form action="">
+                <table>
+                <h1><img src="{% static 'images/user1.png' %}" alt="" style="padding-top: 30px;margin-top: 50px; height: 135px;width: 110px;"></h1> <br><br><br>
+                <!-- <label for="" style="">Full Name*</label><br> -->
+                <input type="text" placeholder="Full Name*" style="font-style: italic; padding-left: 15px; width: 500px;height: 40px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                <input type="text" placeholder="Phone Number*" style="font-style: italic; padding-left: 15px; width: 500px;height: 40px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                <input type="text" placeholder="Email ID*" style="font-style: italic; padding-left: 15px; width: 500px;height: 40px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                <label for="" style="font-style: italic;padding-right: 420px;color: gray;">Gender*</label><br>
+                <input type="radio"><span style="font-style: italic;font-size: larger;">Male</span> &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio"><span style="font-style: italic;font-size: larger;">Female</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio"><span style="font-style: italic;font-size: larger;">Others</span><br><br>
+                <input type="text" placeholder="Address*" style="font-style: italic; padding-left: 15px; width: 500px;height: 40px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                <input type="text" placeholder="Pin Code*" style="font-style: italic; padding-left: 15px; width: 500px;height: 40px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                <input type="text" placeholder="City*" style="font-style: italic; padding-left: 15px; width: 500px;height: 40px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+                <input type="text" placeholder="State*" style="font-style: italic; padding-left: 15px; width: 500px;height: 40px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br><br>
+                <button style="padding-left: 10px; width: 200px;height: 35px; color: white; background-color: rgb(62, 128, 194);border-width: 0px;border-radius: 8px;">Save</button>
+            </table>
+            </form>
+
+        </div>
+    </center>
+    </section>
+    {% endblock %}
+</body>
+</html>

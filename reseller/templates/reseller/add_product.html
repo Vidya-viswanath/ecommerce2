@@ -1,0 +1,38 @@
+{% extends 'reseller/master.html' %}
+{% load static %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<section>
+    
+    <center>
+    <div style="margin-top: 200px;">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <h1>ADD PRODUCT</h1><br><br><br>
+            <table style="background-color: white;">
+            <label for="" style="font-size: xx-large;">Product Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="p_name" type="text" style="font-style: italic; padding-left: 15px; width: 500px;height: 40px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br><br>
+            <label for="" style="font-size: xx-large;">Product Number</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="p_number" type="text" style="font-style: italic; padding-left: 15px; width: 500px;height: 40px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br><br>
+            <label for="" style="font-size: xx-large;">Description</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="p_description" type="text" placeholder="Product details" style="font-style: italic; padding-left: 15px; width: 500px;height: 100px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br><br>
+            <label for="" style="font-size: xx-large;">Upload photo</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="p_photo" type="file"><br><br>
+            <label for="" style="font-size: xx-large;">Price</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="p_price" type="text"  style="font-style: italic; padding-left: 15px; width: 500px;height: 40px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br><br>
+            <label for="" style="font-size: xx-large;">Current Stock</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="p_stock" type="text"  style="font-style: italic; padding-left: 15px; width: 500px;height: 40px;border-radius: 10px;border-color: rgb(177, 174, 174);border-width: 1px;"><br><br>
+            <center><button type="submit" style="margin-left: 50px; border-radius: 5px;width: 75px; height: 25px;">SUBMIT</button></center> 
+        </table>
+        </form>
+    </div>
+</center>
+</section>
+    {% endblock %}
